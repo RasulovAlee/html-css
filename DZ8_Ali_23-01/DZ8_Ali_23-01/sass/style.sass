@@ -1,0 +1,389 @@
+@import "vars"
+.menu
+    height: 60px
+    background-color: #ffffff
+    display: flex
+    justify-content: space-between
+    align-items: center
+    //position: absolute
+    //top: 0
+    //right: 140px
+    //z-index: 2
+    &__inner
+        display: flex
+        align-items: center
+        flex-direction: row
+        justify-content: space-between
+
+        & ul
+            display: flex
+            flex-direction: row
+            align-items: center
+            gap: 55px
+            @media (max-width: 1024px)
+                display: none
+            & a
+                color: #1C1C1C
+                text-decoration: none
+                position: relative
+            & a::before
+                content: ''
+                position: absolute
+                left: 0
+                bottom: 0
+                background-color: #6F2CFF
+                width: 100%
+                height: 2px
+                border-radius: 50px
+                transition: 300ms
+                transform: scaleX(0)
+            & a:hover:before
+                transform: scaleX(1)
+        & button
+            width: 157px
+            height: 40px
+            border-radius: 20px
+            background-color: #6F2CFF
+            color: white
+            border: #6F2CFF
+            transition: 300ms
+            cursor: pointer
+        & button:hover
+            background-color: #ffffff
+            color: #1C1C1C
+            box-shadow: 0 0 2px #6F2CFF inset,0 0 4px #6F2CFF
+
+.home
+    display: flex
+    align-items: center
+    min-height: calc(100vh - 60px)
+    background-color: #F6BED9
+    background-image: url('../images/image-home.jpg')
+    background-position: right center
+    background-repeat: no-repeat
+    background-size: contain
+    @media (max-width: 1024px)
+        background: $pinkColor
+    @media (max-width: 768px)
+        min-height: inherit
+        padding-bottom: 70px
+        padding-top: 70px
+    &__inner
+        max-width: 470px
+        & > span
+            font-size: 15px
+            line-height: 21px
+        & h1
+            margin-top: 20px
+            margin-bottom: 34px
+            font-size: 54px
+            line-height: 61px
+            @media (max-width: 480px)
+                font-size: 22px
+                line-height: 25px
+                width: 200px
+            & strong
+                color: #6F2DFF
+        & p
+            max-width: 438px
+            font-size: 18px
+            line-height: 30px
+            padding-bottom: 40px
+            @media (max-width: 480px)
+                width: 100%
+                font-size: 14px
+                line-height: 20px
+
+            & strong
+                font-weight: 900
+
+form
+    display: flex
+    justify-content: flex-start
+    margin: 0
+    padding: 0
+    @media (max-width: 491px), (min-width: 360px)
+        width: 100%
+    & input
+        border: 2px solid #6F2CFF
+        box-sizing: border-box
+        width: 268px
+        height: 45px
+        border-radius: 30px 0 0 30px
+        padding-left: 25px
+        outline: none
+
+    & button
+        background-color: #6F2CFF
+        border: #6F2CFF
+        width: 187px
+        height: 45px
+        border-radius: 0 30px 30px 0
+        color: white
+        cursor: pointer
+
+.brands
+    background-color: white
+    display: flex
+    flex-direction: column
+    align-items: center
+    &_inner
+        margin: 30px auto
+        & b
+            display: flex
+            justify-content: center
+            font-size: 18px
+            line-height: 30px
+        & a
+            display: flex
+            justify-content: center
+            font-size: 16px
+            line-height: 24px
+            font-weight: bold
+            color: #1C1C1C
+            text-decoration: none
+    &_images
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        margin: 23px 0
+        gap: 64px
+        @media (max-width: 1300px) and (min-width: 768px)
+            flex-wrap: wrap
+        @media (max-width: 767px)
+            flex-direction: column
+            align-items: center
+.easy
+    background-color: #F5F5F5
+    &__inner
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        padding: 10px 0
+        & img
+            margin: 60px
+            @media (max-width: 1023px)
+                display: none
+    &_btn
+        display: flex
+        flex-direction: row
+        gap: 22px
+        padding-bottom: 70px
+        @media (max-width: 424px)
+            flex-direction: column
+            align-items: center
+        @media (max-width: 1023px)
+            padding-top: 50px
+        & button
+            width: 188px
+            height: 40px
+            border-radius: 30px
+    .btn_1
+        background-color: #6F2CFF
+        color: white
+        border: #6F2CFF
+        transition: 300ms
+    .btn_1:hover
+        background-color: #ffffff
+        color: #6F2CFF
+        border: 2px solid #6F2CFF
+
+    .btn_2
+        background-color: white
+        color: #6F2CFF
+        border: white
+        transition: 300ms
+    .btn_2:hover
+        background-color: #6F2CFF
+        color: white
+        text-shadow: 0 0 3px #ffffff
+
+.qubit__inner
+    display: flex
+    flex-direction: column
+    .icons
+        display: flex
+        flex-direction: row
+        padding-top: 40px
+        flex-wrap: wrap
+        align-items: center
+        justify-content: center
+        gap: 45px
+        padding-bottom: 60px
+
+    .more
+        display: flex
+        text-align: center
+        justify-content: center
+        flex-direction: column
+        align-items: center
+        &_content
+            height: 82px
+
+.trusted
+    background: #17002E
+    &__inner
+        display: flex
+        flex-direction: column
+    .trust_h2
+        color: white
+    .cards_block
+        display: flex
+        justify-content: space-between
+        @media (max-width: 1200px)
+            flex-direction: column
+            align-items: center
+    .card_img_1
+        background-image: url("../images/cards/asiatka.jpg")
+        background-position: center
+        background-size: cover
+        border-radius: 7px 7px 0 0
+        width: 350px
+        height: 205px
+        display: flex
+        align-items: center
+        justify-content: center
+        @media (max-width: 424px)
+            max-width: 321px
+    .cards p
+        font-weight: 700
+        font-size: 18px
+        line-height: 22px
+        text-align: center
+        max-width: 185px
+        margin-bottom: 60px
+        color: #6F2CFF
+
+    .card_img_2
+        background-image: url("../images/cards/little_girl.jpg")
+        background-size: cover
+        background-position: center
+        border-radius: 7px 7px 0 0
+        width: 350px
+        height: 205px
+        display: flex
+        align-items: center
+        justify-content: center
+        @media (max-width: 424px)
+            max-width: 321px
+
+    .cards p
+        font-weight: 700
+        font-size: 18px
+        line-height: 22px
+        text-align: center
+        max-width: 219px
+        margin-bottom: 60px
+        color: #6F2CFF
+    .card_img_3
+        background-image: url("../images/cards/afrogirl.jpg")
+        background-position: center
+        background-size: cover
+        border-radius: 7px 7px 0 0
+        width: 350px
+        height: 205px
+        display: flex
+        align-items: center
+        justify-content: center
+        @media (max-width: 424px)
+            max-width: 321px
+
+    .cards p
+        font-weight: 700
+        font-size: 18px
+        line-height: 22px
+        text-align: center
+        max-width: 211px
+        margin-bottom: 60px
+        color: #6F2CFF
+.can
+    background-color: #ffffff
+    &__inner
+        display: flex
+        flex-direction: column
+    &_items
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+        gap: 30px
+        margin-top: 65px
+        margin-bottom: 75px
+.footer
+    background-color: #20003C
+    &_items
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        flex-direction: row
+        flex-wrap: wrap
+        padding-top: 40px
+        position: relative
+        @media (max-width: 1158px)
+            justify-content: flex-start
+        @media (max-width: 376px)
+            flex-direction: column
+            justify-content: flex-start
+
+    .list
+        color: white
+        display: flex
+        flex-direction: column
+        & a
+            color: white
+            text-decoration: none
+            font-size: 14px
+            line-height: 18px
+        & h4
+            font-size: 16px
+            line-height: 21px
+            padding-bottom: 22px
+            padding-right: 30px
+            @media (max-width: 376px)
+                padding-top: 40px
+        &:nth-child(2)h4
+            padding-right: 108px
+        & li
+            width: 120px
+            padding-bottom: 15px
+    &_work
+        //padding-left: 385px
+        color: white
+        position: absolute
+        right: 111px
+        top: 40px
+        @media (max-width: 870px)
+            position: static
+        & h4
+            font-size: 16px
+            line-height: 21px
+            padding-bottom: 22px
+        & p
+            font-size: 14px
+            line-height: 18px
+            padding-bottom: 26px
+            cursor: pointer
+    &_icons
+            display: flex
+            gap: 34px
+    .foot_qubit
+        display: flex
+        align-items: center
+        flex-direction: column
+        color: white
+        padding-bottom: 30px
+        padding-top: 60px
+        & img
+            padding-bottom: 24px
+    .foot_down
+        display: flex
+        justify-content: center
+        position: relative
+        .foot_int
+            cursor: pointer
+            position: absolute
+            left: 0
+            bottom: 40px
+            @media (max-width: 480px)
+                display: none

@@ -1,0 +1,135 @@
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    list-style-type: none
+
+html
+    font: 14px 'Roboto', sans-serif
+    font-weight: 400
+    color: #000000
+//.wrapper
+//    position: relative
+//    z-index: 2
+.container
+    width: 1240px
+    margin: 0 auto
+    @media(max-width: 1280px)
+        width: 100%
+        padding-right: 20px
+        padding-left: 20px
+
+.title
+    text-align: center
+
+    & h2
+        font-size: 40px
+        line-height: 45px
+        padding-top: 58px
+        @media (max-width: 480px)
+            font-size: 18px
+            line-height: 24px
+    & p
+        font-size: 18px
+        line-height: 30px
+        padding-top: 22px
+        @media (max-width: 480px)
+            font-size: 14px
+            line-height: 25px
+
+.more
+    display: flex
+    text-align: center
+    justify-content: center
+    flex-direction: column
+    align-items: center
+    & img
+        width: 50px
+        height: 50px
+        transition: 300ms
+    &:hover img
+        transform: scale(1.8)
+    & b
+        font-size: 19px
+        line-height: 23px
+        padding-top: 42px
+    & p
+            width: 316px
+            font-size: 15px
+            line-height: 22px
+            padding-top: 16px
+.cards
+    display: flex
+    flex-direction: column
+    align-items: center
+    align-content: flex-start
+    max-width: 350px
+    background-color: #ffffff
+    margin-top: 64px
+    margin-bottom: 65px
+    border-radius: 7px
+    @media  (max-width: 1200px)
+        margin-top: 20px
+        margin-bottom: 50px
+    & img
+        padding: 25px 0
+        transition: 300ms
+.youtube:hover
+    transform: scale(1.4)
+.showcard
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    color: white
+    width: 460px
+    background-color: #17002E
+    padding-top: 42px
+    padding-left: 30px
+    border-radius: 12px
+    padding-bottom: 22px
+    &:hover img
+        transform: scale(1.3) rotate(360deg)
+    &:nth-child(2)p
+        max-width: 326px
+    &:nth-child(3)a
+        padding-top: 33px
+    &:nth-child(5)a
+        padding-top: 33px
+    .headline
+        display: flex
+        flex-direction: row
+        align-items: center
+        gap: 22px
+        font-size: 18px
+        line-height: 25px
+        padding-bottom: 30px
+        & img
+            transition: 800ms
+    p
+        font-size: 15px
+        line-height: 22px
+        text-align: left
+        max-width: 380px
+    a
+        line-height: 15px
+        font-size: 15px
+        color: white
+        padding-top: 8px
+        text-decoration-line: none
+        padding-bottom: 9px
+        position: relative
+    a::before
+        content: ''
+        bottom: 0
+        left: 0
+        position: absolute
+        width: 350px
+        height: 3px
+        background-color: #ffffff
+        transition: 300ms
+        transform: scaleX(1)
+        @media (max-width: 424px)
+            width: 250px
+    a:hover:before
+        transform: scaleX(0)
